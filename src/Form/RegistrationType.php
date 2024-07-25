@@ -18,12 +18,11 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('pseudo', TextType::class)
         ->add('email', EmailType::class)
         ->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
             'first_options'  => ['label' => 'Mot de passe'],
-            'second_options' => ['label' => 'Répéter le mot de passe'],
+            'second_options' => ['label' => 'Confirmer le mot de passe'],
             'constraints' => [
                 new NotBlank([
                     'message' => 'Veuillez entrer un mot de passe',

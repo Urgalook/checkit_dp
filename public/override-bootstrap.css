@@ -96,3 +96,12 @@ h3 {
 form i {
     color: var(--primary);
 }
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
