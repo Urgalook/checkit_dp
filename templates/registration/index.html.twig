@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+{% form_theme registrationForm 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="mb-3">Inscription</h1>
+
+    {{ form_start(registrationForm) }}
+        <div class="mb-3 form-group">
+            {{ form_row(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3 form-group">
+            {{ form_row(registrationForm.password, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}
